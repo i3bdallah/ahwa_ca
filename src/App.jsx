@@ -331,16 +331,16 @@ function Story() {
           </p>
           <div className="story-stats">
             <div className="story-stat">
-              <div className="num">2019</div>
+              <div className="num">2026</div>
               <div className="lbl mono">est.</div>
             </div>
             <div className="story-stat">
-              <div className="num">7</div>
+              <div className="num">2+</div>
               <div className="lbl mono">origin farms</div>
             </div>
             <div className="story-stat">
-              <div className="num">3,400+</div>
-              <div className="lbl mono">happy cups</div>
+              <div className="num">B2B & B2C</div>
+              <div className="lbl mono">Channels</div>
             </div>
           </div>
         </div>
