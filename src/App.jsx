@@ -167,8 +167,8 @@ function Hero() {
               <span className="lbl mono">products</span>
             </div>
             <div className="hero-badge">
-              <span className="num">48h</span>
-              <span className="lbl mono">roast to ship</span>
+              <span className="num">★</span>
+              <span className="lbl mono">premium quality</span>
             </div>
             <div className="hero-badge">
               <span className="num">5★</span>
@@ -181,15 +181,15 @@ function Hero() {
           <img className="hero-logo" src="/assets/logo.png" alt="Ahwa logo" />
           <div className="hero-tag t1">
             <span className="ico" style={{ background: '#6b7d3a' }}></span>
-            Single origin
+            Authentic
           </div>
           <div className="hero-tag t2">
             <span className="ico" style={{ background: '#6b2230' }}></span>
-            Small batch roast
+            Smooth
           </div>
           <div className="hero-tag t3">
             <span className="ico" style={{ background: '#b88a4a' }}></span>
-            Free shipping over $60
+            Unforgettable
           </div>
         </div>
       </div>
@@ -199,7 +199,7 @@ function Hero() {
 
 // ─── Marquee ─────────────────────────────────────────────────────────────────
 function Marquee() {
-  const items = ['Whole Bean', 'Ground', 'Turkish', 'Tea', 'Karak', 'Yemeni Mokha', 'Cardamom', 'Saffron', 'Hibiscus', 'Mint'];
+  const items = ['Whole Bean', 'Ground', 'Turkish', 'Tea', 'Adani Tea', 'Cardamom', 'Saffron'];
   const doubled = [...items, ...items];
   return (
     <div className="marquee">
@@ -281,7 +281,7 @@ function Products() {
             </div>
             <h2>Brewed with <em>intention.</em></h2>
           </div>
-          <p className="sub">Pick a category — every order is roasted or blended fresh and ships within 48 hours.</p>
+          <p className="sub">Pick a category — every order is roasted or blended fresh.</p>
         </div>
 
         <div className="cat-tabs">
@@ -327,7 +327,7 @@ function Story() {
             Ahwa started the way the best things do — a small kitchen, a stovetop dallah, and the smell of cardamom pulling everyone in. We couldn't find the cup we grew up on, so we started making it ourselves.
           </p>
           <p>
-            Today we source green beans from family farms in Yemen, Ethiopia, and Colombia, and blend our Turkish coffee from spices we grind ourselves. Small batches. Real people. Coffee the way it was always meant to taste.
+            Small batches, real care, and spices we grind ourselves. Coffee and tea the way it was always meant to taste.
           </p>
           <div className="story-stats">
             <div className="story-stat">
@@ -335,8 +335,8 @@ function Story() {
               <div className="lbl mono">est.</div>
             </div>
             <div className="story-stat">
-              <div className="num">2+</div>
-              <div className="lbl mono">origin farms</div>
+              <div className="num">100%</div>
+              <div className="lbl mono">natural</div>
             </div>
             <div className="story-stat">
               <div className="num">B2B & B2C</div>

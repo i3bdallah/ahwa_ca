@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = '6479202381';
+export const WHATSAPP_NUMBER = '16479202381';
 export const INSTAGRAM_URL = 'https://www.instagram.com/ahwa.ca';
 
 export const waLink = (msg) =>
