@@ -59,57 +59,29 @@ const Icon = {
   ),
 };
 
-// ─── Product image placeholder ───────────────────────────────────────────────
-function ProductImage({ cat, name, packaging }) {
-  if (packaging) {
-    return (
-      <div style={{
-        width: '100%', height: '100%',
-        background: 'linear-gradient(180deg, #efe2cb 0%, #d8c4a3 100%)',
-        display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
-        position: 'relative', overflow: 'hidden',
-      }}>
-        <div style={{
-          position: 'absolute', inset: 0,
-          background: 'radial-gradient(circle at 50% 30%, rgba(255,255,255,.5), transparent 60%)',
-        }} />
-        <img
-          src="/assets/packaging.png"
-          alt={name}
-          style={{
-            height: '115%', width: 'auto', objectFit: 'contain',
-            marginBottom: '-8%', position: 'relative', zIndex: 1,
-            filter: 'drop-shadow(0 12px 24px rgba(58,32,20,.18))',
-          }}
-        />
-      </div>
-    );
-  }
-  const palettes = {
-    turkish: { bg: '#2d1820', stripe: '#3a2028', accent: '#6b2230', label: 'TURKISH' },
-    espresso: { bg: '#5a2c20', stripe: '#6b3a2a', accent: '#a35d3f', label: 'ESPRESSO' },
-    tea:     { bg: '#3a4520', stripe: '#4a5528', accent: '#8a9b4a', label: 'TEA' },
-  };
-  const p = palettes[cat] || palettes.turkish;
+// ─── Product image ───────────────────────────────────────────────────────────
+function ProductImage({ image, name }) {
   return (
-    <svg viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <pattern id={`stripe-${cat}`} width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-          <rect width="14" height="14" fill={p.bg} />
-          <rect width="7" height="14" fill={p.stripe} />
-        </pattern>
-        <radialGradient id={`glow-${cat}`} cx="50%" cy="40%" r="60%">
-          <stop offset="0%" stopColor={p.accent} stopOpacity="0.35" />
-          <stop offset="100%" stopColor={p.bg} stopOpacity="0" />
-        </radialGradient>
-      </defs>
-      <rect width="400" height="300" fill={`url(#stripe-${cat})`} />
-      <rect width="400" height="300" fill={`url(#glow-${cat})`} />
-      <circle cx="200" cy="150" r="60" fill="none" stroke={p.accent} strokeWidth="1" opacity="0.35" />
-      <circle cx="200" cy="150" r="92" fill="none" stroke={p.accent} strokeWidth="0.5" opacity="0.25" />
-      <text x="200" y="148" textAnchor="middle" fill={p.accent} fontFamily="JetBrains Mono, monospace" fontSize="11" letterSpacing="3" opacity="0.85">{p.label}</text>
-      <text x="200" y="166" textAnchor="middle" fill={p.accent} fontFamily="JetBrains Mono, monospace" fontSize="9" letterSpacing="1.5" opacity="0.55">product photo</text>
-    </svg>
+    <div style={{
+      width: '100%', height: '100%',
+      background: 'linear-gradient(180deg, #efe2cb 0%, #d8c4a3 100%)',
+      display: 'flex', alignItems: 'flex-end', justifyContent: 'center',
+      position: 'relative', overflow: 'hidden',
+    }}>
+      <div style={{
+        position: 'absolute', inset: 0,
+        background: 'radial-gradient(circle at 50% 30%, rgba(255,255,255,.5), transparent 60%)',
+      }} />
+      <img
+        src={image}
+        alt={name}
+        style={{
+          height: '115%', width: 'auto', objectFit: 'contain',
+          marginBottom: '-8%', position: 'relative', zIndex: 1,
+          filter: 'drop-shadow(0 12px 24px rgba(58,32,20,.18))',
+        }}
+      />
+    </div>
   );
 }
 
@@ -218,7 +190,7 @@ function ProductCard({ p, isFav, onFav }) {
   return (
     <article className="card">
       <div className="card-img">
-        <ProductImage cat={p.cat} name={p.name} packaging={p.packaging} />
+        <ProductImage image={p.image} name={p.name} />
         <span className="card-tag">{p.origin}</span>
         <button className={`card-fav ${isFav ? 'on' : ''}`} onClick={onFav} aria-label="Save">
           <Icon.Heart style={{ width: 14, height: 14 }} />

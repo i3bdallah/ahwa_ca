@@ -283,6 +283,7 @@ section { position: relative; z-index: 1; }
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
   color: var(--ink-2);
+  z-index: 3;
 }
 .card-fav {
   position: absolute; top: 14px; right: 14px;
@@ -291,6 +292,7 @@ section { position: relative; z-index: 1; }
   display: flex; align-items: center; justify-content: center;
   border: none; color: var(--burgundy);
   transition: transform .2s, background .2s;
+  z-index: 3;
 }
 .card-fav:hover { transform: scale(1.08); background: #fff; }
 .card-fav.on { background: var(--burgundy); color: var(--cream-2); }

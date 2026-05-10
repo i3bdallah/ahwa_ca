@@ -1,0 +1,85 @@
+# Ahwa product catalog
+# Edit this file to update titles, descriptions, prices, or images.
+# Pushing changes to GitHub will auto-deploy via Netlify.
+#
+# Field guide
+#   id           unique short ID (do not reuse)
+#   cat          category — must match one of: turkish, espresso, tea
+#   name         display name
+#   origin       small uppercase tag shown on the card image
+#   description  paragraph shown under the name
+#   price        number (no currency symbol)
+#   unit         right-side text after the price, e.g. "/ 200g"
+#   notes        list of short tasting/flavor notes
+#   image        path to the product photo, relative to /public
+
+categories:
+  - id: all
+    label: All
+  - id: turkish
+    label: Turkish
+  - id: espresso
+    label: Espresso
+  - id: tea
+    label: Tea
+
+products:
+  - id: t1
+    cat: turkish
+    name: Turkish Coffee
+    origin: Extra Fine Grind
+    description: Slow-roasted, stone-ground to a silken powder. The classic ahwa — rich, bold, traditional.
+    price: 10
+    unit: / 200g
+    notes: [Dark Cocoa, Toasted, Smooth]
+    image: /assets/packaging.png
+
+  - id: t2
+    cat: turkish
+    name: Turkish Coffee with Cardamom
+    origin: Extra Fine Grind
+    description: Our Turkish coffee blended with green cardamom. Aromatic, warming, the way it was meant to be.
+    price: 10
+    unit: / 200g
+    notes: [Cardamom, Cocoa, Spice]
+    image: /assets/packaging.png
+
+  - id: t3
+    cat: turkish
+    name: Turkish Extra Cardamom
+    origin: Extra Fine · Premium Spiced
+    description: Twice the cardamom — bold, fragrant, unmistakable. For those who like it loud and aromatic.
+    price: 12
+    unit: / 200g
+    notes: [Cardamom, Spice, Aromatic]
+    image: /assets/packaging.png
+
+  - id: e1
+    cat: espresso
+    name: Espresso
+    origin: Medium-Fine Grind
+    description: House blend ground for espresso machines. Rich crema, full body, balanced finish.
+    price: 10
+    unit: / 200g
+    notes: [Cocoa, Caramel, Bold]
+    image: /assets/packaging.png
+
+  - id: tea1
+    cat: tea
+    name: Green Tea
+    origin: Loose Leaf
+    description: Light and refreshing. A clean, gentle cup — perfect any time of day.
+    price: 5
+    unit: / 200g
+    notes: [Grassy, Fresh, Light]
+    image: /assets/packaging.png
+
+  - id: tea2
+    cat: tea
+    name: Adani Tea
+    origin: Yemeni Spiced Black Tea
+    description: Strong black tea brewed with milk, cardamom and spices — rich, fragrant, the cup of Aden.
+    price: 10
+    unit: / 200g
+    notes: [Cardamom, Milk, Spice]
+    image: /assets/packaging.png
